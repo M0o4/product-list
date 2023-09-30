@@ -1,0 +1,56 @@
+@bar-height: 56px;
+
+:host {
+    display: block;
+
+    .top-wrapper,
+    .top-container {
+        height: @bar-height;
+    }
+
+    .top-wrapper {
+        .top-container {
+            position: fixed;
+            z-index: 998;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+
+            &__top-content {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1400px;
+                width: 100%;
+                padding: 0 75px;
+            }
+
+            .top-content {
+                .main-page-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    &__logo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        text-align: center;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 80%;
+                        background-color: rgb(252, 63, 29);
+                    }
+                }
+            }
+        }
+    }
+}

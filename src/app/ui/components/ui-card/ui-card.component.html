@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card__card-wrapper card-wrapper">
+        <div class="card-wrapper__card-img card-img">
+            <img [ngSrc]="imgUrl" height="180" width="194" alt="IMG" />
+        </div>
+        <div class="card-wrapper__tex-content tex-content">
+            <div class="tex-content__card-name">
+                {{ name }}
+            </div>
+            <ng-container *ngIf="!isDiscount; else discount">
+                <div class="tex-content__card-price">{{ price }} <span>₽</span></div>
+            </ng-container>
+            <ng-template #discount>
+                <div class="tex-content__card-price-discount-wrapper card-price-discount-wrapper">
+                    <div class="card-price-discount-wrapper__price">{{ priceWithDiscount }} <span>₽</span></div>
+                    <div class="card-price-discount-wrapper__old-price">{{ price }} <span>₽</span></div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

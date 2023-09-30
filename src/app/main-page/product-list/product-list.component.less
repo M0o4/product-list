@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        padding: 40px 20px;
+        row-gap: 16px;
+        column-gap: 10px;
+    }
+
+    @media all and (max-width: 1200px) {
+        display: block;
+        .card-container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+}

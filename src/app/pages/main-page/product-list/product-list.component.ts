@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
-import { ApiService } from '../../core/api/api.service';
+import { ApiService } from '../../../core/api/api.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
-import { IProduct } from '../../core/api/interfaces/product.interface';
+import { IProduct } from '../../../core/api/interfaces/product.interface';
 
 @Component({
     selector: 'app-product-list',

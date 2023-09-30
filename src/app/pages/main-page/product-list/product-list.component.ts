@@ -3,7 +3,7 @@ import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
 
 import { IProduct } from '../../../core/api/interfaces/product.interface';
-import { ApiService } from '../../../core/api/api.service';
+import { ProductService } from '../../../core/api/product.service';
 
 @Component({
     selector: 'app-product-list',
@@ -17,7 +17,7 @@ export class ProductListComponent implements OnInit {
     private readonly destroy$: Subject<void> = new Subject<void>();
 
     constructor(
-        private readonly apiService: ApiService,
+        private readonly apiService: ProductService,
         private readonly router: Router,
     ) {}
 

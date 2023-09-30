@@ -5,7 +5,7 @@ import { mockProducts } from '../common/mock/mock-data';
 import { IProduct } from './interfaces/product.interface';
 
 @Injectable({ providedIn: 'root' })
-export class ApiService {
+export class ProductService {
     public getProductList(): Observable<IProduct[]> {
         return of(mockProducts).pipe(delay(1500)); // artificial delay
     }

@@ -3,7 +3,7 @@ import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { IProduct } from '../../../core/api/interfaces/product.interface';
-import { ApiService } from '../../../core/api/api.service';
+import { ProductService } from '../../../core/api/product.service';
 
 @Component({
     selector: 'app-product-detail',
@@ -19,7 +19,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     constructor(
         private readonly activatedRoute: ActivatedRoute,
         private readonly router: Router,
-        private readonly apiService: ApiService,
+        private readonly apiService: ProductService,
     ) {}
 
     public ngOnInit(): void {

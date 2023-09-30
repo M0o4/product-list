@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-
-import { ApiService } from '../../../core/api/api.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
+import { Router } from '@angular/router';
+
 import { IProduct } from '../../../core/api/interfaces/product.interface';
+import { ApiService } from '../../../core/api/api.service';
 
 @Component({
     selector: 'app-product-list',
@@ -11,11 +12,14 @@ import { IProduct } from '../../../core/api/interfaces/product.interface';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductListComponent implements OnInit {
-    public readonly products$: BehaviorSubject<IProduct[]> = new BehaviorSubject<IProduct[]>([]);
+    public readonly products$: BehaviorSubject<IProduct[] | null> = new BehaviorSubject<IProduct[] | null>(null);
 
     private readonly destroy$: Subject<void> = new Subject<void>();
 
-    constructor(private readonly apiService: ApiService) {}
+    constructor(
+        private readonly apiService: ApiService,
+        private readonly router: Router,
+    ) {}
 
     public ngOnInit() {
         this.apiService
@@ -24,12 +28,15 @@ export class ProductListComponent implements OnInit {
             .subscribe(
                 (res) => {
                     if (!res) {
+                        this.router.navigate(['404']);
                         return;
                     }
 
                     this.products$.next(res);
                 },
-                (error) => {},
+                () => {
+                    this.router.navigate(['404']);
+                },
             );
     }
 }

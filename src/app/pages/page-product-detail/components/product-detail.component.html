@@ -1,0 +1,27 @@
+<ng-container *ngIf="product$ | async as product; else loading">
+    <div class="product-details">
+        <div class="product-details__details-wrapper details-wrapper">
+            <div class="details-wrapper__details-content details-content">
+                <div class="details-content__top-content top-content">
+                    <div class="top-content__img-wrapper img-wrapper">
+                        <img class="img" [ngSrc]="product.img" width="200" height="300" alt="IMG" />
+                    </div>
+                    <div class="top-content__text-content text-content">
+                        <div class="text-content__name">
+                            {{ product.name }}
+                        </div>
+                        <ui-price class="text-content__price" [price]="product.price" [discount]="product.discount"></ui-price>
+                    </div>
+                </div>
+
+                <div class="details-content__description-content description-content">
+                    <div class="description-content__header">Описание</div>
+                    <div class="description-content__description">{{ product.description }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

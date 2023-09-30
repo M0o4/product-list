@@ -1,0 +1,15 @@
+<ng-container *ngIf="product">
+    <div class="card">
+        <div class="card__card-wrapper card-wrapper" (click)="onClick()">
+            <div class="card-wrapper__card-img card-img">
+                <img [ngSrc]="product.img" height="180" width="194" alt="IMG" />
+            </div>
+            <div class="card-wrapper__tex-content tex-content">
+                <div class="tex-content__card-name">
+                    {{ product.img }}
+                </div>
+                <ui-price [price]="product.price" [discount]="product.discount"></ui-price>
+            </div>
+        </div>
+    </div>
+</ng-container>

@@ -1,14 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'ui-card',
-    templateUrl: './ui-card.component.html',
-    styleUrls: ['./ui-card.component.less'],
+    selector: 'ui-price',
+    templateUrl: './ui-price.component.html',
+    styleUrls: ['./ui-price.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UiCardComponent implements OnInit {
-    @Input() imgUrl: string = '';
-    @Input() name: string = '';
+export class UiPriceComponent implements OnInit {
     @Input() price: number = 0;
     @Input() discount: number = 0;
 

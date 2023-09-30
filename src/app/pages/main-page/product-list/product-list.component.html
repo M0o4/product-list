@@ -1,7 +1,10 @@
-<div class="card-container">
-    <ng-container *ngIf="products$ | async as products">
+<ng-container *ngIf="products$ | async as products; else loading">
+    <div class="card-container">
         <ng-container *ngFor="let product of products">
-            <ui-card [imgUrl]="product.img" [name]="product.name" [discount]="product.discount" [price]="product.price"></ui-card>
+            <ui-card [product]="product"></ui-card>
         </ng-container>
-    </ng-container>
-</div>
+    </div>
+</ng-container>
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

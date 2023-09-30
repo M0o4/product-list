@@ -1,0 +1,9 @@
+<ng-container *ngIf="!isDiscount; else discount">
+    <div class="price">{{ price }} <span>₽</span></div>
+</ng-container>
+<ng-template #discount>
+    <div class="card-price-discount-wrapper">
+        <div class="card-price-discount-wrapper__price">{{ priceWithDiscount }} <span>₽</span></div>
+        <div class="card-price-discount-wrapper__old-price">{{ price }} <span>₽</span></div>
+    </div>
+</ng-template>

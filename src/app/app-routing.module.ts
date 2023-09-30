@@ -6,15 +6,19 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'fake-market',
+        redirectTo: 'products',
     },
     {
-        path: 'fake-market',
+        path: 'products',
         loadChildren: () => import('./pages/main-page/main-page.module').then((m) => m.MainPageModule),
     },
     {
-        path: '**',
+        path: '404',
         component: PageNotFoundComponent,
+    },
+    {
+        path: '**',
+        redirectTo: '404',
     },
 ];
 

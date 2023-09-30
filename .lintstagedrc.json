@@ -1,0 +1,12 @@
+{
+  "src/**/*.{js,ts}": [
+    "prettier --write",
+    "eslint --fix"
+  ],
+  "src/**/*.less": [
+    "prettier --write"
+  ],
+  "src/**/*.{md,json,html}": [
+    "prettier --write"
+  ]
+}

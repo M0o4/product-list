@@ -1,0 +1,53 @@
+# compiled output
+/dist
+/dist-*
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+/package-lock.json
+/yarn.lock
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+.history/*
+
+.editorconfig
+.gitignore
+.gitlab-ci.yml
+.huskyrc.json
+.lintstagedrc.json
+.npmrc
+.prettierignore
+.prettierrc.js
+angular.json
+browserslist
+.browserslistrc
+ng-package.json
+package.json
+karma.conf.js
+tsconfig.json
+tsconfig.*.json
+tslint.json
+tslint.*.json
+.eslintrc.json
+
+/e2e
+/tools
+
+/data

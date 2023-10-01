@@ -51,4 +51,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         this.destroy$.next();
         this.destroy$.complete();
     }
+
+    public onCategoryClicked(category: string): void {
+        this.router.navigate(['catalog'], { queryParams: { search: category } });
+    }
 }

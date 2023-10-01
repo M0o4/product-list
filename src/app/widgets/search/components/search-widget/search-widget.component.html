@@ -1,0 +1,10 @@
+<div class="search-widget">
+    <div class="search-widget__input-wrapper input-wrapper">
+        <div class="input-wrapper__input-content input-content">
+            <div class="input-content__input-field input-field">
+                <input placeholder="Искать товар" class="input-field__input" [(ngModel)]="inputValue" (keyup.enter)="onSearch()" />
+            </div>
+        </div>
+    </div>
+    <ui-button (buttonClick)="onSearch()">Найти</ui-button>
+</div>

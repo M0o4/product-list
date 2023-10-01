@@ -10,6 +10,11 @@
                         <div class="text-content__name">
                             {{ product.name }}
                         </div>
+                        <mat-chip-listbox>
+                            <ng-container *ngFor="let category of product.categories">
+                                <mat-chip (click)="onCategoryClicked(category.name)">{{ category.name }}</mat-chip>
+                            </ng-container>
+                        </mat-chip-listbox>
                         <ui-price class="text-content__price" [price]="product.price" [discount]="product.discount"></ui-price>
                     </div>
                 </div>

@@ -18,6 +18,7 @@ export const mockProducts: IProduct[] = [
         discount: 51,
         name: 'Стол для компьютера угловой (правый) c электрической регулировкой по высоте EUREKA ERK-L60R-RB',
         price: 113981,
+        categories: [{ name: 'Стол' }, { name: 'Пк' }],
     },
     {
         id: 2,
@@ -28,6 +29,7 @@ export const mockProducts: IProduct[] = [
         discount: 50,
         name: 'Сумка клатч повседневная, текстиль, внутренний карман, зеленый',
         price: 1400,
+        categories: [{ name: 'Сумка' }, { name: 'Одежда' }],
     },
     {
         id: 3,
@@ -36,6 +38,7 @@ export const mockProducts: IProduct[] = [
         discount: 7,
         name: 'Беспроводная клавиатура Nuphy ультратонкая, AIR75 (Twilight) RGB подсветка, Brown Switch',
         price: 13490,
+        categories: [{ name: 'Клавиатура' }, { name: 'Пк' }],
     },
     {
         id: 4,
@@ -47,6 +50,7 @@ export const mockProducts: IProduct[] = [
         discount: 19,
         name: 'Геймпад Xbox wireless controller Starfield Limited edition',
         price: 14990,
+        categories: [{ name: 'Геймпад' }, { name: 'Пк' }, { name: 'Консоль' }],
     },
     {
         id: 5,
@@ -57,6 +61,7 @@ export const mockProducts: IProduct[] = [
             '14.2" Ноутбук Apple Macbook Pro 14 Late 2021 3024×1964, Apple M1 Pro 3.2 ГГц, RAM 16 ГБ, ' +
             'SSD 512 ГБ, Apple graphics 14-core, macOS, MKGP3ZE/A, серый космос, английская раскладка',
         price: 210000,
+        categories: [{ name: 'Ноутбук' }, { name: 'Пк' }],
     },
     {
         id: 6,
@@ -65,6 +70,7 @@ export const mockProducts: IProduct[] = [
         discount: 0,
         name: 'Манга Человек-бензопила. Кн. 7 Птица и война',
         price: 529,
+        categories: [{ name: 'Книга' }, { name: 'Манга' }, { name: 'Комикс' }],
     },
     {
         id: 7,
@@ -74,6 +80,7 @@ export const mockProducts: IProduct[] = [
         discount: 44,
         name: 'Мягкая игрушка милый кавайный Кот- акула 30 см',
         price: 1200,
+        categories: [{ name: 'Игрушка' }],
     },
     {
         id: 8,
@@ -84,5 +91,6 @@ export const mockProducts: IProduct[] = [
         discount: 2,
         name: 'Nintendo Switch Pro Контроллер - The Legend of Zelda: Tears of the Kingdom Edition',
         price: 10980,
+        categories: [{ name: 'Геймпад' }, { name: 'Пк' }, { name: 'Консоль' }],
     },
 ];

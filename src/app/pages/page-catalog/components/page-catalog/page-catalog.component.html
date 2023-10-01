@@ -1,0 +1,11 @@
+<ng-container *ngIf="products$ | async as products; else loading">
+    <ng-container *ngIf="!isProductsEmpty; else empty">
+        <app-products-grid [products]="products"></app-products-grid>
+    </ng-container>
+    <ng-template #empty>
+        <div class="empty"><span>Этого мы не нашли</span></div>
+    </ng-template>
+</ng-container>
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

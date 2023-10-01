@@ -18,7 +18,7 @@ export class UiPriceComponent implements OnInit {
 
     public ngOnInit() {
         if (this.isDiscount) {
-            this.priceWithDiscount = this.price - (this.price * this.discount) / 100;
+            this.priceWithDiscount = Math.trunc(this.price - (this.price * this.discount) / 100);
         }
     }
 }

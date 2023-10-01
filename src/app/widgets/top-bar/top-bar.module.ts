@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopBarComponent } from './components/top-bar.component';
 import { RouterLink } from '@angular/router';
+import { NgModule } from '@angular/core';
+
+import { TopBarComponent } from './components/top-bar.component';
 
 @NgModule({
     imports: [CommonModule, RouterLink],

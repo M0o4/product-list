@@ -1,7 +1,7 @@
+import { NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { PageNotFoundComponent } from './components/page-not-found.component';
-import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
     imports: [NgOptimizedImage],

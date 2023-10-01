@@ -1,9 +1,10 @@
 import { delay, map, Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 
-import { mockProducts } from '../common/mock/mock-data';
-import { IProduct } from './interfaces/product.interface';
 import { LocalStorageService } from '../common/services/local-storage/local-storage.service';
+import { mockProducts } from '../common/mock/mock-data';
+
+import { IProduct } from './interfaces/product.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {

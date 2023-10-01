@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { IProduct } from '../../../../core/api/interfaces/product.interface';
 import { LocalStorageService } from '../../../../core/common/services/local-storage/local-storage.service';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-page-create-product',
